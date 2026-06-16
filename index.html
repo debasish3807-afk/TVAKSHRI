@@ -1,47 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TVAKSHRI — Luxury Herbal Skincare</title>
-    <meta name="description" content="TVAKSHRI offers premium Ayurvedic herbal face packs and skincare powered by ancient wisdom. Neem, Haldi, Rose, Ubtan and more — pure, potent, luxurious." />
-    <meta name="keywords" content="herbal skincare, ayurvedic face pack, neem face pack, haldi face pack, rose face pack, ubtan, natural skincare india, luxury herbal beauty" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVAKSHRI - Astrology & Spiritual Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tvakshri.onspace.app" />
-    <meta property="og:title" content="TVAKSHRI — Luxury Herbal Skincare" />
-    <meta property="og:description" content="Premium Ayurvedic herbal face packs rooted in ancient wisdom. Pure botanicals, luxurious results." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=1200&h=630&fit=crop" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="TVAKSHRI" />
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">TVAKSHRI</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TVAKSHRI — Luxury Herbal Skincare" />
-    <meta name="twitter:description" content="Premium Ayurvedic herbal face packs rooted in ancient wisdom." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=1200&h=630&fit=crop" />
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Discover Your True Destiny</h1>
+            <p>Astrology, Horoscope, and Spiritual Guidance Tailored for Your Life's Journey.</p>
+            <a href="#contact" class="btn-primary">Book a Consultation</a>
+        </div>
+    </section>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Our Sacred Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Horoscope Reading</h3>
+                <p>Detailed analysis of your birth chart and planetary positions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Vastu Shastra</h3>
+                <p>Align your living and working spaces with positive cosmic energy.</p>
+            </div>
+            <div class="service-card">
+                <h3>Gemstone Consultation</h3>
+                <p>Find the perfect gemstone to channel planetary strengths.</p>
+            </div>
+        </div>
+    </section>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Store",
-      "name": "TVAKSHRI",
-      "url": "https://tvakshri.onspace.app",
-      "description": "Premium Ayurvedic herbal face packs and skincare",
-      "category": "Beauty & Personal Care"
-    }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Contact Section with Form Validation -->
+    <section id="contact" class="contact-section">
+        <h2>Connect With Us</h2>
+        <form id="consultationForm" class="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group">
+                <textarea id="message" rows="5" placeholder="Your Message or Birth Details..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit Details</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 TVAKSHRI. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
 </html>
