@@ -76,6 +76,10 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -92,9 +96,13 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
       },
       fontFamily: {
-        serif: ["Cormorant Garamond", "Georgia", "serif"],
+        serif: ["Playfair Display", "Georgia", "serif"],
         display: ["Playfair Display", "Georgia", "serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
       },
@@ -104,6 +112,7 @@ export default {
         "slide-in-right": "slideInRight 0.4s ease-out forwards",
         "shimmer": "shimmer 1.5s infinite",
         "float": "float 3s ease-in-out infinite",
+        "ping-slow": "ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
         fadeUp: {
@@ -124,20 +133,28 @@ export default {
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-8px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
       backgroundImage: {
         "gold-gradient": "linear-gradient(135deg, #C9A84C 0%, #E8C97A 50%, #C9A84C 100%)",
         "cream-gradient": "linear-gradient(180deg, #FFF8F0 0%, #FFF0D9 100%)",
         "herbal-gradient": "linear-gradient(135deg, #2D6B14 0%, #4E9A30 100%)",
+        "dark-gradient": "linear-gradient(180deg, #1A1208 0%, #120D05 100%)",
       },
       boxShadow: {
-        "gold": "0 4px 24px rgba(201, 168, 76, 0.25)",
-        "gold-lg": "0 8px 40px rgba(201, 168, 76, 0.35)",
+        "gold": "0 4px 24px rgba(201, 168, 76, 0.30)",
+        "gold-lg": "0 8px 40px rgba(201, 168, 76, 0.40)",
         "soft": "0 2px 16px rgba(0, 0, 0, 0.06)",
-        "card": "0 4px 32px rgba(0, 0, 0, 0.08)",
-        "product": "0 8px 48px rgba(0, 0, 0, 0.10)",
+        "card": "0 4px 32px rgba(0, 0, 0, 0.10)",
+        "product": "0 8px 48px rgba(0, 0, 0, 0.12)",
+      },
+      spacing: {
+        "safe-bottom": "env(safe-area-inset-bottom)",
+      },
+      borderRadius: {
+        "3xl": "1.5rem",
+        "4xl": "2rem",
       },
     },
   },

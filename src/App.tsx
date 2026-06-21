@@ -7,6 +7,8 @@ import { AuthProvider } from "@/hooks/useAuth";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/features/WhatsAppButton";
+import { NewsletterPopup } from "@/components/features/NewsletterPopup";
+import { AISkinCareChat } from "@/components/features/AISkinCareChat";
 import { ProtectedRoute } from "@/components/features/ProtectedRoute";
 
 // Eagerly loaded — critical path
@@ -68,12 +70,15 @@ const ScrollToTop = () => {
 const HIDE_FOOTER_ROUTES = ["/admin"];
 const HIDE_NAV_ROUTES = ["/admin"];
 const AUTH_ROUTES = ["/login", "/signup", "/forgot-password", "/reset-password"];
+const HIDE_CHAT_ROUTES = ["/admin", "/checkout", "/login", "/signup", "/forgot-password", "/reset-password"];
 
 const AppLayout = () => {
   const { pathname } = useLocation();
   const hideNav = HIDE_NAV_ROUTES.some((r) => pathname.startsWith(r));
   const hideFooter = HIDE_FOOTER_ROUTES.some((r) => pathname.startsWith(r));
   const isAuthPage = AUTH_ROUTES.some((r) => pathname.startsWith(r));
+  const hideChat = HIDE_CHAT_ROUTES.some((r) => pathname.startsWith(r));
+  const isShopOrHome = pathname === "/" || pathname.startsWith("/shop") || pathname.startsWith("/product");
 
   return (
     <>
@@ -121,7 +126,10 @@ const AppLayout = () => {
         </Suspense>
       </main>
       {!hideFooter && !isAuthPage && <Footer />}
+      {/* Floating elements */}
       {!hideFooter && !isAuthPage && <WhatsAppButton />}
+      {!hideChat && <AISkinCareChat />}
+      {isShopOrHome && <NewsletterPopup />}
     </>
   );
 };
